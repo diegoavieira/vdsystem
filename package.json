@@ -3,6 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "workspaces": [
+    "src/*",
+    "libs/*"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -15,7 +19,8 @@
     "test:app": "vitest --project=app --watch=false",
     "test:coverage": "vitest run --coverage",
     "prepare": "husky",
-    "commit": "czg"
+    "commit": "czg",
+    "release": "lerna version"
   },
   "dependencies": {
     "react": "^19.2.0",
@@ -44,6 +49,7 @@
     "globals": "^16.5.0",
     "husky": "^9.1.7",
     "jsdom": "^28.0.0",
+    "lerna": "^9.0.4",
     "prettier": "^3.8.1",
     "pretty-quick": "^4.2.2",
     "typescript": "~5.9.3",
