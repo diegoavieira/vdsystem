@@ -8,7 +8,7 @@ import prettierPlugin from 'eslint-plugin-prettier/recommended';
 import { defineConfig, globalIgnores } from 'eslint/config';
 
 export default defineConfig([
-  globalIgnores(['dist', 'build', 'coverage', 'node_modules', '*.log']),
+  globalIgnores(['dist', 'coverage', 'node_modules', '*.log']),
   {
     files: ['**/*.{ts,tsx}'],
     extends: [
@@ -29,7 +29,7 @@ export default defineConfig([
       'react-prop-types': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
       '@typescript-eslint/no-explicit-any': 'warn',
-      'prettier/prettier': 'error'
+      'prettier/prettier': ['error', { endOfLine: 'auto' }]
     }
   }
 ]);
