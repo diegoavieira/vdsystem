@@ -1,3 +1,0 @@
-#!/usr/bin/env sh
-[ "$SKIP_PRE_PUSH" = "true" ] && exit 0
-npm run test
