@@ -11,8 +11,8 @@
     "format": "prettier --write .",
     "test": "vitest --watch=false",
     "test:watch": "vitest",
-    "test:libs": "vitest --project=libs",
-    "test:app": "vitest --project=app",
+    "test:libs": "vitest --project=libs --watch=false",
+    "test:app": "vitest --project=app --watch=false",
     "test:coverage": "vitest run --coverage",
     "prepare": "husky",
     "commit": "czg"

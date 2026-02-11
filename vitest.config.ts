@@ -36,8 +36,9 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
-      '@libs': path.resolve(__dirname, './libs')
+      '@vdsystem/app': path.resolve(__dirname, './src'),
+      '@vdsystem/components': path.resolve(__dirname, './libs/components'),
+      '@vdsystem/utils': path.resolve(__dirname, './libs/utils')
     }
   }
 });
