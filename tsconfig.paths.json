@@ -1,9 +1,0 @@
-{
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@vdsystem/components": ["libs/components/index.ts"],
-      "@vdsystem/utils": ["libs/utils/index.ts"]
-    }
-  }
-}
