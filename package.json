@@ -18,6 +18,10 @@
     "test:libs": "vitest --project=libs --watch=false",
     "test:app": "vitest --project=app --watch=false",
     "test:coverage": "vitest run --coverage",
+    "build:components": "cross-env LIB_NAME=components vite build --config vite.lib.config.ts",
+    "build:utils": "cross-env LIB_NAME=utils vite build --config vite.lib.config.ts",
+    "build:libs": "run-s build:components build:utils",
+    "build:app": "run-s build copy:docs",
     "prepare": "husky",
     "commit": "czg",
     "release": "lerna version"
@@ -40,6 +44,7 @@
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.1.1",
     "@vitest/coverage-v8": "^4.0.18",
+    "cross-env": "^10.1.0",
     "czg": "^1.12.0",
     "eslint": "^9.39.1",
     "eslint-config-prettier": "^10.1.8",
@@ -50,11 +55,16 @@
     "husky": "^9.1.7",
     "jsdom": "^28.0.0",
     "lerna": "^9.0.4",
+    "npm-run-all": "^4.1.5",
     "prettier": "^3.8.1",
     "pretty-quick": "^4.2.2",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.48.0",
     "vite": "^7.3.1",
+    "vite-plugin-css-injected-by-js": "^3.5.2",
+    "vite-plugin-dts": "^4.5.4",
+    "vite-plugin-static-copy": "^3.2.0",
+    "vite-tsconfig-paths": "^6.1.1",
     "vitest": "^4.0.18"
   }
 }

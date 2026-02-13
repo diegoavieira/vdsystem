@@ -1,0 +1,46 @@
+{
+  "name": "@vdsystem/components",
+  "version": "1.0.0",
+  "description": "This library is part of project Vanilla Design System",
+  "author": "Diego Adilson de Souza Vieira <diegoavieira@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js",
+      "default": "./index.js"
+    },
+    "./*": {
+      "types": "./*.d.ts",
+      "import": "./*.js"
+    },
+    "./*/": {
+      "types": "./**/index.d.ts",
+      "import": "./**/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "**/*.js",
+    "**/*.d.ts",
+    "**/*.css",
+    "!**/*.test.*",
+    "!**/*.spec.*",
+    "!node_modules"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diegoavieira/vdsystem.git"
+  },
+  "homepage": "https://diegoavieira.github.io/vdsystem",
+  "bugs": "https://github.com/diegoavieira/vdsystem/issues",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {},
+  "peerDependencies": {},
+  "peerDependenciesMeta": {}
+}
