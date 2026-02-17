@@ -1,5 +1,4 @@
 import { defineConfig } from 'vitest/config';
-import path from 'path';
 
 export default defineConfig({
   test: {
@@ -34,11 +33,5 @@ export default defineConfig({
       }
     ]
   },
-  resolve: {
-    alias: {
-      '@vdsystem/app': path.resolve(__dirname, './src'),
-      '@vdsystem/components': path.resolve(__dirname, './libs/components'),
-      '@vdsystem/utils': path.resolve(__dirname, './libs/utils')
-    }
-  }
+  resolve: {}
 });

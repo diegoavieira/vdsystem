@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { VdsToolbar } from './vds-toolbar';
+import VdsToolbar from './vds-toolbar';
 
 describe('VdsToolbar', () => {
   beforeEach(() => {

@@ -1,13 +1,15 @@
 {
-  "extends": ["./tsconfig.app.json", "./tsconfig.paths.json"],
+  "extends": ["./tsconfig.paths.json"],
   "compilerOptions": {
     "composite": true,
     "declaration": true,
     "emitDeclarationOnly": true,
-    "sourceMap": false,
-    "outDir": "./dist",
-    "rootDir": "./libs"
+    "moduleResolution": "bundler",
+    "noEmit": false,
+    "outDir": "dist",
+    "rootDir": "libs"
   },
   "include": ["libs/**/*"],
-  "exclude": ["libs/**/*.test.ts", "libs/**/*.spec.ts", "node_modules", "dist"]
+  "exclude": ["libs/**/*.test.ts", "node_modules/**", "dist/**"],
+  "references": [{ "path": "./libs/components" }, { "path": "./libs/utils" }]
 }

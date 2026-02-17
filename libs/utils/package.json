@@ -10,8 +10,7 @@
   "exports": {
     ".": {
       "types": "./index.d.ts",
-      "import": "./index.js",
-      "default": "./index.js"
+      "import": "./index.js"
     },
     "./*": {
       "types": "./*.d.ts",
@@ -24,12 +23,7 @@
     "./package.json": "./package.json"
   },
   "files": [
-    "**/*.js",
-    "**/*.d.ts",
-    "**/*.css",
-    "!**/*.test.*",
-    "!**/*.spec.*",
-    "!node_modules"
+    "dist/**/*"
   ],
   "repository": {
     "type": "git",

@@ -3,7 +3,9 @@
     "baseUrl": ".",
     "paths": {
       "@vdsystem/components": ["libs/components/index.ts"],
-      "@vdsystem/utils": ["libs/utils/index.ts"]
+      "@vdsystem/components/*": ["libs/components/*"],
+      "@vdsystem/utils": ["libs/utils/index.ts"],
+      "@vdsystem/utils/*": ["libs/utils/*"]
     }
   }
 }

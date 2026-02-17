@@ -1,1 +1,1 @@
-export { default } from './vds-toolbar';
+export { default as VdsToolbar } from './vds-toolbar';

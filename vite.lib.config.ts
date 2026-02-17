@@ -40,32 +40,21 @@ export default defineConfig({
     },
 
     rollupOptions: {
-      external: [/@vdsystem\/.*/],
       output: {
         preserveModules: true,
         preserveModulesRoot: `libs/${libName}`,
         entryFileNames: '[name].js',
-        chunkFileNames: '[name].js',
+        chunkFileNames: '[name]-[hash].js',
         format: 'es',
         inlineDynamicImports: false,
         hoistTransitiveImports: false,
         manualChunks: undefined,
         exports: 'named',
         globals: {}
-        // assetFileNames: (assetInfo) => {
-        //   const name = assetInfo.names?.[0] || 'asset';
-
-        //   if (name.endsWith('.css')) {
-        //     return '[name][extname]';
-        //   }
-
-        //   return 'assets/[name]-[hash][extname]';
-        // }
       },
       treeshake: false
     },
-    minify: false,
+    minify: 'esbuild',
     sourcemap: false
-    // cssCodeSplit: false
   }
 });

@@ -1,4 +1,4 @@
-import { VdsToolbarProps } from './vds-toolbar.props';
+import type { VdsToolbarProps } from './vds-toolbar.props';
 import styles from './vds-toolbar.module.css?inline';
 
 export default class VdsToolbar extends HTMLElement implements VdsToolbarProps {
@@ -11,16 +11,27 @@ export default class VdsToolbar extends HTMLElement implements VdsToolbarProps {
   }
 
   static get observedAttributes() {
-    return ['title', 'theme'];
+    return ['title', 'theme'] as const;
   }
 
   connectedCallback() {
     this.render();
   }
 
-  attributeChangedCallback(name: string, oldValue: string, newValue: string) {
+  attributeChangedCallback(name: string, oldValue: string | null, newValue: string | null) {
     if (oldValue !== newValue) {
-      this[`_${name}` as keyof this] = newValue as any;
+      switch (name.toLowerCase()) {
+        case 'title':
+          this.title = newValue || '';
+          break;
+        case 'theme':
+          if (newValue === 'light' || newValue === 'dark') {
+            this.theme = newValue as 'light' | 'dark';
+          }
+          break;
+        default:
+          console.warn(`Atributo desconhecido: ${name}`);
+      }
       this.render();
     }
   }

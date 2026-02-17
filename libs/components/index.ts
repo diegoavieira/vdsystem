@@ -1,2 +1,2 @@
-// Export all components here
-export * from './vds-toolbar/index';
+export { VdsToolbar } from './vds-toolbar';
+// export { VdsOther } from './vds-other';
