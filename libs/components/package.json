@@ -23,7 +23,7 @@
     "./package.json": "./package.json"
   },
   "files": [
-    "dist/**/*"
+    "**/*"
   ],
   "repository": {
     "type": "git",
