@@ -33,8 +33,5 @@
   "bugs": "https://github.com/diegoavieira/vdsystem/issues",
   "publishConfig": {
     "access": "public"
-  },
-  "dependencies": {},
-  "peerDependencies": {},
-  "peerDependenciesMeta": {}
+  }
 }

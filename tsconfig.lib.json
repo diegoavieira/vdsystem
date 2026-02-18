@@ -7,7 +7,8 @@
     "moduleResolution": "bundler",
     "noEmit": false,
     "outDir": "dist",
-    "rootDir": "libs"
+    "rootDir": "libs",
+    "types": ["vite/client"]
   },
   "include": ["libs/**/*"],
   "exclude": ["libs/**/*.test.ts", "node_modules/**", "dist/**"],
